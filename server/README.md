@@ -1,0 +1,1 @@
+The server gets json object from https://randomuser.me/api/, and stores new object in postgreSQL database

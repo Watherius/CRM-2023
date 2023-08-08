@@ -1,0 +1,1734 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/*Удалить*/
+.clock {
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    background: #fff;
+    padding: 0 20px;
+}
+/**/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;  
+}
+
+body, html  {
+    background: linear-gradient(45deg, #FAFAFA 100%, #F4F5F7 78%, #FAFAFA 100%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;  
+    height: 100%;
+    color: #000;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+label,
+input,
+button,
+form,
+div,
+img,
+svg,
+ul,
+li,
+table {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*position: relative;*/
+}
+
+.app__error404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__error404 span {
+    font-size: 42px;
+}
+
+.app__error404 span:first-of-type {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.btn {
+    cursor: pointer;
+    background: #DFDFDF;
+    color: #000;
+    width: 208px;
+    padding: 9px 10px;
+    border-radius: 4px;
+    border: 0;
+    transition: .2s;
+}
+
+.btn:hover {
+    background: #cecece;
+}
+
+.btn.active {
+    background: #514FC5;
+    color: #fff;
+}
+
+.btn.active:hover {
+    background: #413B91;
+}
+
+.btn__file {
+    display: flex;
+    align-items: center;
+    width: 168px;
+    color: #000;
+    background: #e9e9e9;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.app__input-text {
+    padding: 12px 18px;
+}
+
+/*Страница "Входа"*/
+.app__login,
+.app__registration {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.app__auth {
+    background: #fff;
+    padding: 40px 42px 30px;
+    border-radius: 15px;
+    max-width: 416px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2);
+}
+
+.app__auth .app__input-text {
+    padding: 12px 45px 12px 18px;
+}
+
+.app__auth-header {
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    line-height: 39px;
+    font-style: normal;
+}
+
+.app__input-box:first-of-type {
+    margin-top: 0;
+}
+
+.app__input-box {
+    margin-top: 15px;
+}
+
+.app__auth-input {
+    margin-top: 30px;
+}
+
+.login-input-label {
+    font-weight: 500;
+    margin-left: 7px;
+    margin-bottom: 5px;
+}
+
+.app__input-text {
+    width: 333px;
+    max-width: 333px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 2px solid #9C9C9C;
+    border-radius: 4px;
+    color: #3A3A3A;
+}
+
+.app__input-text:active,
+.app__input-text:focus {
+    border-color: #413B91;
+    outline: none;
+}
+
+.app__input-text:disabled:active,
+.app__input-text:disabled:focus {
+    border-color: #9C9C9C;
+    outline: none;
+}
+
+.app__input-box-password {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.login-password-show {
+    position: absolute;
+    right: 18px;
+    fill: #9C9C9C;
+    cursor: pointer;
+}
+
+.login-password-show:hover {
+    fill: #000;
+}
+
+.app__auth-checkbox {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 2px 0;
+}
+
+.app__auth-checkbox .line-checkbox {
+    display: flex;
+}
+
+.login-checkbox-label {
+    margin-left: 10px;
+}
+
+.login-checkbox-label {
+    font-weight: 500;
+}
+
+.app__auth-reset-password {
+    display: flex;
+    font-weight: 500;
+    justify-content: left;
+}
+
+.app__auth-reset-password {
+    color: #1A5EC3;
+}
+
+.app__auth-reset-password:hover {
+    text-decoration: underline;
+}
+
+.app__auth-box-button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.app__auth-button {
+    width: 100%;
+    /*margin-top: 7px;*/
+    padding: 9px 10px;
+    border-radius: 4px;
+}
+
+/*.app__block-btn{
+    margin-top: 7px;
+}*/
+
+/*.app__block-btn:first-of-type {
+    margin-top: 0;
+}*/
+
+.app__auth-box-button-label {
+    margin-top: 7px;
+}
+
+.app__auth-box-link {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.app__auth-box-link-label {
+    display: flex;
+    font-weight: 500;
+}
+
+.app__auth-link {
+    padding-left: 6px;
+    color: #1A5EC3;
+    font-weight: 600;
+}
+
+.app__auth-link:hover {
+    text-decoration: underline;
+}
+
+/*Левое меню*/
+.left_menu {
+    width: 100%;
+    max-width: 225px;
+    background: #fff;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.logo {
+    padding: 40px 30px 0;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.page_navigator {
+    padding-top: 110px;
+}
+
+.page_navigator-btn {
+    margin-top: 2px;
+}
+
+.page_navigator-btn:first-of-type {
+    margin-top: 0;
+}
+
+.page_navigator-link {
+    display: flex;
+    position: relative;
+    border-radius: 13px;
+    align-items: center;
+    text-decoration: none;
+    color: #474747;
+    fill: #474747;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 0;
+    padding-left: 52px;
+    margin: 0 14px;
+}
+
+.page_navigator-link svg {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+}
+
+.page_navigator-link:hover {
+    background: #f9f9fd;
+}
+
+.page_navigator-link.active {
+    background: #F1F2FF;
+    color: #3431BF;
+    fill: #3431BF;    
+}
+
+/* Шапка */
+.global_search {
+    display: flex;
+    align-items: center;
+    fill: #717171;
+}
+
+.global_search input {
+    border: none;
+    font-size: 15px;
+    color: #000;
+    height: 28px;
+    padding: 4px 0;
+    padding-left: 5px;
+    background: transparent;
+}
+
+.global_search input:active,
+.global_search input:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+/* Стили для страниц */
+.app__page {
+    padding-top: 40px;
+    padding-left: 225px;
+}
+.header {
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.usermenu__content {
+    display: flex;
+    align-items: center;
+}
+
+.usermenu__info {
+    margin-left: 8px;
+}
+
+.usermenu__user {
+    font-size: 12px;
+}
+
+.usermenu__name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.usermenu__btn {
+    display: flex;
+    fill: #858585;
+    margin-top: auto;
+    margin-left: 6px;
+}
+
+.usermenu__btn button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.usermenu__btn button:hover {
+    fill: #000;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;    
+}
+
+.app__main {
+    margin-top: 60px;
+    position: relative;
+}
+
+.app__content {
+    /*display: flex;*/
+    margin-top: 40px;
+    position: relative;
+}
+
+.app__content-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    position: absolute;
+    right: 0;
+}
+
+.app__content-btn .app__block-btn {
+    margin-right: 10px;
+}
+
+.app__content-btn .app__block-btn:last-of-type {
+    margin-right: 0;
+}
+
+.app__header-name {
+    margin-right: 100px;
+}
+
+.app__header {
+    display: flex;
+}
+
+.app__filter, 
+.app__filter-box {
+    display: flex;
+}
+
+.app__filter-box {
+    margin-top: auto;
+}
+
+.app__filter-item {
+    display: grid;
+    text-align: center;
+    margin-left: 10px;
+    justify-items: center;
+}
+
+.app__filter-item:first-of-type {
+    margin-left: 0;
+}
+
+.app__filter-item::after {
+    content: '';
+    display: flex;
+    width: calc(100% + 10px);
+    border-bottom: 1px solid #888;
+}
+
+.app__filter-item:hover::after,
+.app__filter-item.active::after {
+    content: '';
+    border-bottom: 1px solid #000;
+}
+
+.app__filter-link {
+    color: #888;
+    padding-bottom: 6px;
+}
+
+.app__filter-link:hover,
+.app__filter-item.active .app__filter-link {
+    text-decoration: none;
+    color: #000;    
+}
+
+.app__header-breadcrumb {
+    display: flex;
+}
+
+.app__header-breadcrumb-item {
+    display: flex;
+}
+
+.app__header-breadcrumb-item-link {
+    color: #B8B8B8;
+}
+
+.app__header-breadcrumb-item:last-child::before {
+    color: #000;
+}
+
+.app__header-breadcrumb-item:last-child .app__header-breadcrumb-item-link {
+    color: #000;
+    text-decoration: underline;
+}
+
+.app__header-breadcrumb-item-link:hover {
+    text-decoration: underline;
+}
+
+.app__header-breadcrumb-item {
+    padding-left: 4px;
+}
+
+.app__header-breadcrumb-item::before {
+    content: '/';
+    color: #B8B8B8;
+    padding-right: 4px;
+}
+
+.app__header-breadcrumb-item:first-child {
+    padding-left: 0;
+}
+
+.app__header-breadcrumb-item:first-child::before {
+    content: '';
+    padding-right: 0;
+}
+
+.app__search {
+    margin-top: auto;
+    margin-left: auto;
+    max-width: 260px;
+    width: 100%;
+}
+
+.app__search-item {
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #B8B8B8;
+    padding-bottom: 6px;
+    padding-left: 5px;
+}
+
+.app__search-item:active,
+.app__search-item:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+/* Таблицы */
+.app__table-box {
+    width: 100%;
+}
+
+.app__table-box thead,
+.app__table-box tbody {
+    display: grid;
+    align-items: center;
+    font-size: 12px;
+}
+
+.app__table-box thead {
+    height: 40px;
+    border-bottom: 1px solid #000;
+    font-weight: 500;
+    color: #7E7E7E;
+}
+
+.app__table-box tbody tr {
+    height: 50px;
+    border-bottom: 1px solid #7E7E7E;
+    font-weight: 600;
+    color: #000;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.app__table-box tbody tr:hover {
+    background: #F5F9FF;
+    border-bottom: 1px solid #365FA9;
+} 
+
+.app__table-box tr {
+    display: grid;
+    padding: 0 30px;
+    align-items: center;
+    justify-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  
+}
+
+.app__table-box th {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    fill: #6D6D6D;
+    transition: .3s;
+}
+
+.app__table-box th:hover {
+    color: #000;
+    fill: #000;
+}
+
+.app__table-box td {
+    height: max-content;
+}
+
+.app__table-box th:last-of-type,
+.app__table-box td:last-of-type {
+    cursor: auto;
+}
+
+/*.app__table-box th:first-of-type,
+.app__table-box td:first-of-type {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}*/
+
+.status__app {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.status__app.expectation {
+    color: #C98C30;
+}
+
+.status__app.waiting {
+    color: #305BC9;
+}
+
+.status__app.in-process {
+    color: #6930C7;
+}
+
+.status__app.accepted {
+    color: #5A9E24;
+}
+
+.status__app.reject {
+    color: #A62727;
+}
+
+.status__app.used {
+    color: #305BC9;
+    background: #fff;
+    padding: 2px 6px;
+    border: 1px solid #305BC9;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.status__app.no-used {
+    color: #707070;
+    background: #fff;
+    padding: 2px 6px;
+    border: 1px solid #707070;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.status__app.deny {
+    color: #DB4040;
+    background: #FFF3F3;
+    padding: 2px 6px;
+    border: 1px solid #DB4040;
+    border-radius: 16px;
+}
+
+.status__app.allow {
+    color: #4DAF3D;
+    background: #EEFEEB;
+    padding: 2px 6px;
+    border: 1px solid #4DAF3D;
+    border-radius: 16px;
+}
+
+.app__table-link {
+    padding: 4px 18px;
+    border-radius: 4px;
+    background: #D9D9D9;
+    color: #888;
+}
+
+.app__table-link.active {
+    color: #3431BF;
+    background: #F1F2FF;
+}
+
+.app__table-link.active:hover {
+    background: #e9ebff;
+}
+
+/* Страница "Запись на курс */
+.app__category {
+    margin-top: 20px;
+}
+
+.app__category:first-of-type {
+    margin-top: 0;
+}
+
+.app__registration-verification-stage .app__category:first-of-type {
+    margin-top: 20px;
+}
+
+.app__category-header {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.app__category-input {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.app__input-list-header {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.app__input-list-nofile {
+    margin-top: 10px;
+    text-decoration: underline;
+    height: 90px;
+}
+
+.app__input-file-list {
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.app__input-file-box {
+    margin-top: 15px;
+}
+
+.app__input-line {
+    display: flex;
+    align-items: center;
+}
+
+.app__file-count {
+    display: flex;
+    margin-left: 10px;
+    color: #B2B2B2;
+}
+
+.app__file-del-all {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.app__file-del-all:hover {
+    color: #000;
+}
+
+.app__input-file-btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    flex-direction: row;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: #DFDFDF;
+    padding: 5px 8px;
+    text-align: left;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.app__input-file-btn:hover {
+    background: #F1F2FF;
+    color: #3431BF;
+    fill: #3431BF;
+}
+
+.app__input-file-btn:disabled {
+    background: #DFDFDF;
+    color: #9C9C9C;
+    fill: #9C9C9C;
+}
+
+.app__input-file-text {
+    padding-left: 4px;
+    display: inline;
+    white-space: nowrap;
+}
+
+.app__input-file {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.app__input-file-items {
+    display: flex;
+    height: 80px;
+}
+
+.app__input-file-item {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.app__input-file-item:first-of-type {
+    margin-left: 0;
+}
+
+.app__input-file-increase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.app__input-file-increase img {
+    position: absolute;
+    width: 22px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.app__input-file-item:hover .app__input-file-increase::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #828282;
+    opacity: .6;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.app__input-file-item:hover .app__input-file-increase img {
+    opacity: 1;
+}
+
+.app__input-file-del {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #AFAFAF;
+    border-radius: 15px;
+    background: #fff;
+    padding: 2px;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 1;
+}
+
+.app__input-file-del:hover {
+    transform: scale(1.1);
+}
+
+.app__input-file-content {
+    display: flex;
+    justify-content: center;
+}
+
+.app__input-file-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    border-radius: 4px;
+}
+
+.app__input-file-img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: #A6A6A6;
+    border-radius: 4px;
+}
+
+.app__input-file-name {
+    display: none;
+    position: absolute;
+    background: #fff;
+    bottom: -30px;
+    width: max-content;
+    padding: 4px 6px;
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 10px 4px rgba(34, 60, 80, 0.2);
+}
+
+.app__input-file-item:hover .app__input-file-name {
+    display: block;
+}
+
+/* Этапы заявки */
+.app__conclusion-stage {
+    margin-left: auto;
+}
+
+.app__stage-state {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.app__stage-list {
+    margin-top: 20px;
+}
+
+.app__stage::before {
+    content: '\00A6';
+    color: #BABABA;
+    font-size: 22px;
+    margin-left: 4.5px;
+    line-height: 22px;
+}
+
+.app__stage:first-of-type::before {
+    content: none;
+}
+
+.app__stage .app__stage-indicator {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.app__stage .app__stage-indicator::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.app__stage.default::before,
+.app__stage.default .app__stage-indicator {
+    color: #BABABA;
+}
+
+.app__stage.default .app__stage-indicator::before  {
+    border: 1px solid #BABABA;
+}
+
+.app__stage.current::before {
+    color: #3A6B98;
+}
+
+.app__stage.current .app__stage-indicator {
+    color: #3A6B98;
+    text-shadow: 0px 4px 8px rgba(58, 73, 152, 0.25);
+}
+
+.app__stage.current .app__stage-indicator::before  {
+    border: none;
+    background-color: #3A6B98;
+    box-shadow: 0px 0px 4px 1px rgba(58, 107, 152, 0.2);
+}
+
+.app__stage.done::before {
+    color: #3A984F;
+}
+
+.app__stage.done .app__stage-indicator {
+    color: #3A984F;
+    text-shadow: 0px 4px 8px rgba(58, 152, 79, 0.25);
+}
+
+.app__stage.done .app__stage-indicator::before {
+    border: none;
+    background-color: #3A984F;
+    box-shadow: 0px 0px 4px 1px rgba(58, 152, 79, 0.2);
+}
+
+.app__stage.not-done::before {
+    color: #C55454;
+}
+
+.app__stage.not-done .app__stage-indicator {
+    text-shadow: 0px 4px 8px rgba(197, 84, 84, 0.25);
+    color: #C55454;
+}
+
+.app__stage.not-done .app__stage-indicator::before {
+    border: none;
+    background-color: #C55454;
+    box-shadow: 0px 0px 4px 1px rgba(197, 84, 84, 0.2);
+}
+
+.app__stage-indicator::before {
+    margin-top: 2px;
+}
+
+.app__registration-verification-stage {
+    margin-top: 40px;
+    /*position: relative;*/
+}
+
+.app__registration-end-text-1 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.app__registration-end-text-2 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.app__category-list {
+    margin-top: 20px;
+    padding-left: 8px;
+}
+
+.app__registration-verification-stage .app__category-item-text,
+.app__registration-verification-stage .app__category-item-files {
+    margin-top: 15px;
+}
+
+.app__category-item-box {
+    display: flex;
+}
+
+.app__category-item-text {
+    display: flex;
+    color: #3A3A3A;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.app__category-item-text:first-of-type,
+.app__category-item-file:first-of-type {
+    margin-top: 0;
+}
+
+.app__category-item-header {
+    font-weight: 500;
+    color: #000;
+    margin-right: 10px;
+}
+
+.app__category-item-files .status__app {
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.app__item-text .app__category-item-files .status__app {
+    margin-top: -1px;
+}
+
+.status__app.file {
+    background: #E0EBFF;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #1960EA;
+    width: max-content;
+}
+
+.app__registration-end .app__category {
+    margin-top: 20px;
+}
+
+.flex-display {
+    display: flex;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+}
+
+/* Страница "О курсе" */
+.app__course-state-info {
+    display: flex;
+    margin-top: 10px;
+}
+
+.app__course-state-box,
+.app__conclusion-state-box {
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    color: #787878;
+}
+
+.app__course-state {
+    margin-left: 6px;
+}
+
+.app__course-state.deny {
+    color: #C73232;
+}
+
+.app__course-state.allow {
+    color: #47C732;
+}
+
+.app__conclusion-state-box {
+    margin-left: 30px;
+}
+
+.app__conclusion-state .status__app {
+    margin-left: 10px;
+    /*background: #FFE6C1;
+    padding: 1px 5px;
+    border-radius: 4px;*/
+}
+
+.app__course-text {
+    margin-top: 20px;
+    max-width: 720px;
+    font-weight: 400;
+    color: #000;
+    text-align: justify;
+}
+
+.app__course-author {
+    margin-top: 20px;
+}
+
+.app__course-author-name {
+    margin-top: 4px;
+}
+
+.app__course-author-name:first-of-type {
+    margin-top: 0;
+}
+
+.app__content-btn-signature {
+    color: #767676;
+    font-size: 12px;
+    max-width: 208px;
+    font-style: italic;
+}
+
+
+/* Страница "История заявки" */
+.app__conclusion-history {
+    display: flex;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.app__conclusion-history-item {
+    display: flex;
+}
+
+.app__item-time {
+    margin-right: 5px;
+}
+
+.app__time-date {
+    font-weight: 600;
+}
+
+.app__time-clock {
+    font-weight: 500;
+    color: #4B4B4B;
+}
+
+.app__item-name {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #bbb;
+}
+
+.app__item-icon {
+    margin-right: 4px;
+    fill: #bbb;
+}
+
+.app__item-content.correct .app__item-name,
+.app__item-content.correct .app__item-icon {
+    color: #3A984F;
+    fill: #3A984F;
+}
+
+.app__item-content.correct .app__item-text .app__category-item-text::before {
+    border-left: 1px dashed #3A984F;
+    border-bottom: 1px dashed #3A984F;
+}
+
+.app__item-content.incorrect .app__item-name,
+.app__item-content.incorrect .app__item-icon {
+    color: #C55454;
+    fill: #C55454;
+}
+
+.app__item-content.incorrect .app__item-text .app__category-item-text::before {
+    border-left: 1px dashed #C55454;
+    border-bottom: 1px dashed #C55454;
+}
+
+.app__item-content.waiting .app__item-name,
+.app__item-content.waiting .app__item-icon {
+    color: #4768E0;
+    fill: #4768E0;
+}
+
+.app__item-content.waiting .app__item-text .app__category-item-text::before {
+    border-left: 1px dashed #4768E0;
+    border-bottom: 1px dashed #4768E0;
+}
+
+.app__item-content.warning .app__item-name,
+.app__item-content.warning .app__item-icon {
+    color: #C98C30;
+    fill: #C98C30;
+}
+
+.app__item-content.warning .app__item-text .app__category-item-text::before {
+    border-left: 1px dashed #C98C30;
+    border-bottom: 1px dashed #C98C30;
+}
+
+.app__item-text {
+    margin-left: 22px;
+}
+
+.app__item-text .app__category-list {
+    margin: 0;
+    padding: 0;
+}
+
+.app__item-text .app__category-item-header {
+    padding-left: 40px;
+}
+
+.app__item-text .app__category-item-files {
+    display: flex;
+}
+
+.app__item-text .app__category-item-text {
+    position: relative;
+    display: flex;
+    margin-top: 5px;
+    padding-top: 4px;
+}
+
+.app__item-text .app__category-item-text::before {
+    content: '';
+    position: absolute;
+    border-bottom-left-radius: 8px;
+    border-left: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+    width: 34px;
+    height: 20px;
+    top: -6px;
+}
+
+.app__conclusion-history-item {
+    margin-top: 15px;
+}
+
+.app__conclusion-history-item:first-of-type {
+    margin-top: 0;
+}
+
+/* Регистрация заявки - Этап оплата*/
+.app__category-payment {
+    margin-top: 15px;
+}
+
+.app__category-payment-text {
+    max-width: 475px;
+}
+
+.app__category-btns {
+    margin-top: 20px;
+}
+
+.app__category-btns-separator {
+    margin-top: 15px;
+    margin-left: 80px;
+}
+
+/* Страница "Мои курсы" */
+.table__my-courses tr {
+    grid-template-columns: repeat(5, 1fr) 68px;
+}
+
+/* Страница "Курсы" */
+.table__courses tr {
+    grid-template-columns: 60px 250px repeat(5, 1fr) 20px;
+}
+
+/* Страница "Заявки" */
+.table__applications tr {
+    grid-template-columns: 40px 250px repeat(5, 1fr) 20px;
+}
+
+table .app__checkbox {
+    background: #EAEAEB;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+table .app__checkbox label {
+    width: 16px;
+    height: 16px;
+}
+
+/* Кастомный checkbox */
+.app__checkbox-custom {
+    display: inline-block;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    border: 2px solid #999;
+    border-radius: 2px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.app__checkbox-custom:hover {
+    border-color: #1B60EA;
+}
+
+.app__checkbox-custom input[type="checkbox"],
+.app__checkbox-custom .checkmark {
+    display: none;
+}
+
+.app__checkbox-custom input[type="checkbox"]:checked + .checkmark,
+.app__checkbox-custom input[type="checkbox"]:checked + .checkmark:after {
+    display: block;
+}  
+
+.app__checkbox-custom .checkmark:after {
+    content: "\2714";
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: inherit;
+    height: inherit;
+    color: #1B60EA;
+}
+
+/* Кнопки при выделении заявки */
+.app__actions {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.btn__action {
+    cursor: pointer;
+    background: #DFDFDF;
+    color: #000;
+    width: 90px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: .2s;
+}
+
+.btn__action:hover {
+    color: #1B60EA;
+    background: #EDF3FF;
+    border: 1px solid #1B60EA;
+}
+
+.app__actions .app__block-btn {
+    margin-right: 10px;
+}
+
+/* Окно уведомления */
+.app__notification {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.app__notification-block {
+    position: relative;
+    border-radius: 3px;
+    border-left: 4px solid transparent;
+    padding: 16px 30px;
+    background: #fff;
+    width: 388px;
+    height: 108px;
+}
+
+.notification-head {
+    display: flex;
+    align-items: center;
+}
+
+.notification-name {
+    margin-left: 5px;
+    font-weight: 700;
+    color: #222B45;
+}
+
+.notification-close {
+    position: absolute;
+    right: 30px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.notification-content {
+    margin-top: 4px;
+    margin-left: 26px;
+    width: 100%;
+    max-width: 255px;
+}
+
+.notification-content .notification-content-type,
+.notification-content .notification-content-fio {
+    font-weight: 600;
+    color: #222B45;
+    display: inline;
+}
+
+.notification-content .notification-content-fio {
+    text-decoration: underline;
+}
+
+.notification-time {
+    margin-top: 4px;
+    color: #708599;
+    font-size: 12px;
+}
+
+.app__notification-block.notification_successfully {
+    border-color: #3EC43B;
+    fill: #3EC43B;
+}
+
+.app__notification-block.notification_error {
+    border-color: #F62B6F;
+    fill: #F62B6F;
+}
+
+.app__notification-block.notification_warning {
+    border-color: #d6be33;
+    fill: #d6be33;
+}
+
+/* Страница "Формы" */
+.form__item-use {
+    color: #7D7D7D;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.table__forms tr {
+    grid-template-columns: 40px 250px repeat(4, 1fr) 20px;
+}
+
+/* Модальные окна */
+.app__modal-window {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(80, 80, 80, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__modal-block {
+    position: relative;
+    background: #fff;
+    border: 1px solid #4E4E4E;
+    border-radius: 10px;
+    padding: 25px 20px 20px;
+    width: 230px;
+    height: auto;
+}
+
+.app__modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.app__modal-close:hover {
+    transform: scale(1.5);
+}
+
+/* Модальное окно "Создание формы */
+.app__modal-content {
+    text-align: center;
+}
+
+.app__modal-header {
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #373737;
+}
+
+.app__modal-list-btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.app__modal-btn {
+    background: #DFDFDF;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.app__modal-btn:hover {
+    background: #514FC5;
+}
+
+.app__modal-btn:hover .app__modal-btn-icon {
+    fill: #fff;
+}
+
+.app__modal-btn:hover .app__modal-btn-name {
+    color: #fff;
+}
+
+.app__modal-btn-icon {
+    display: flex;
+    align-items: center;
+}
+
+.app__modal-btn-name {
+    font-weight: 500;
+    font-size: 12px;
+    color: #000;
+}
+
+/* Создание формы или курса */
+.app__settings-content {
+    font-size: 16px;
+}
+
+.app__setting-item {
+    display: flex;
+    margin-top: 20px;
+}
+
+.app__content-setting:first-child {
+    margin-top: 0;
+}
+
+.app__setting-name {
+    font-weight: 500;
+    width: 145px;
+}
+
+.app__setting-input-box {
+    margin-left: 10px;
+    display: flex;
+    align-items: end;
+}
+
+.app__setting-input-box select {
+    padding-right: 20px;
+    background: url('../images/elements/small-arrow-input.svg') no-repeat right center;
+    background-size: 10px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.app__setting-input-box input {
+    width: 300px;
+    background: inherit;
+    cursor: text;
+}
+
+.app__setting-input {
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 1px solid #000;
+    display: flex;
+    padding-left: 5px;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.app__setting-input:focus-visible {
+    outline: none;
+}
+
+.app__create-content {
+    margin-top: 25px;
+}
+
+.app_create-btn {
+    margin-top: 15px;
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 4px;
+    border: 2px dashed #9C9C9C;
+    cursor: pointer;
+    color: #9C9C9C;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.app__create-content {
+    font-size: 16px;
+}
+
+.app__create-content .app__input-box {
+    display: block;
+    width: max-content;
+    position: relative;
+    z-index: 1;
+}
+
+.app__create-content .app__input-box input {
+    background-color: #fff;
+}
+
+/*.app__create-content .app__input-box:hover::before {
+    content: '';
+    right: -5px;
+    left: -5px;
+    top: -5px;
+    bottom: -5px;
+    position: absolute;
+    z-index: -1;
+    background-color: #E7E7E7;
+    border-radius: 4px;
+}*/
+
+.app_input-actions {
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.app_input-actions .app_setting-edit svg {
+    fill: #8A8A8A;
+    cursor: pointer;
+}
+
+.app_input-actions .app_setting-edit:hover svg {
+    fill: #000;
+}
+
+.app__input-settings {
+    position: absolute;
+    top: 0;
+    padding: 25px;
+    right: -390px;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+}
+
+.app__input-settings .app__setting-name {
+    width: 105px;
+}
+
+.app__input-settings .app__setting-input-box input {
+    width: auto;
+}
+
+.app__input-settings .app__setting-item:first-child {
+    margin-top: 0;
+}
+
+.app__input-settings .btn {
+    margin-top: 35px;
+    width: 100%;
+}
+
